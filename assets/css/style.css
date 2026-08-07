@@ -373,11 +373,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hot:hover,.hot.is-open{background:hsl(var(--primary-hover));transform:scale(1.15)}
 .hot.is-open::before{animation:none}
 
-.hot__card{position:absolute;left:0;right:0;bottom:0;z-index:3;
-  padding:1.25rem 3rem 1.35rem 1.35rem;
-  background:hsl(var(--background)/.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-top:1px solid hsl(var(--border));
-  animation:cardIn .45s var(--ease) both}
+/* Schwebt am unteren Bildschirmrand statt am Ende des (hohen) Fotos —
+   so ist die Karte immer sofort sichtbar, egal wo im Bild man klickt */
+.hot__card{position:fixed;left:50%;bottom:1.25rem;z-index:150;
+  width:min(26rem,calc(100vw - 2.5rem));
+  transform:translateX(-50%);
+  padding:1.25rem 3rem 1.35rem 1.35rem;border-radius:var(--r);
+  background:hsl(var(--background)/.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid hsl(var(--border));
+  box-shadow:0 1.5rem 3rem -1rem hsl(0 0% 0%/.35);
+  animation:cardIn .4s var(--flow) both}
 .hot__card[hidden]{display:none}
 .hot__card strong{display:block;font-family:var(--font-display);font-size:1.4rem;font-weight:400;letter-spacing:-.02em}
 .hot__card p{margin-top:.35rem;font-size:.9rem;line-height:1.55;color:hsl(var(--muted-foreground))}
@@ -386,7 +391,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   background:none;border:1px solid hsl(var(--border));border-radius:50%;cursor:pointer;
   color:hsl(var(--muted-foreground))}
 .hot__close:hover{color:hsl(var(--foreground))}
-@keyframes cardIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes cardIn{from{opacity:0;transform:translateX(-50%) translateY(18px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
 /* ============================================================
    Technik
