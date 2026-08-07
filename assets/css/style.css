@@ -363,14 +363,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 .hot{position:absolute;left:var(--x);top:var(--y);translate:-50% -50%;
   width:1.65rem;height:1.65rem;padding:0;border-radius:50%;cursor:pointer;
-  background:hsl(var(--foreground)/.14);border:1px solid hsl(var(--foreground)/.55);
-  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
+  background:hsl(var(--red));border:2px solid hsl(0 0% 100%/.9);
+  box-shadow:0 2px 10px hsl(0 0% 0%/.45);
   transition:background-color .3s,transform .4s var(--ease)}
 .hot::before{content:'';position:absolute;inset:0;border-radius:50%;
-  box-shadow:0 0 0 0 hsl(var(--crema)/.55);animation:ping 3s ease-out infinite}
-.hot::after{content:'';position:absolute;inset:0;margin:auto;width:.35rem;height:.35rem;
-  border-radius:50%;background:hsl(var(--foreground))}
-.hot:hover,.hot.is-open{background:hsl(var(--crema));transform:scale(1.15)}
+  box-shadow:0 0 0 0 hsl(var(--red)/.6);animation:ping 2.4s ease-out infinite}
+.hot::after{content:'';position:absolute;inset:0;margin:auto;width:.4rem;height:.4rem;
+  border-radius:50%;background:hsl(0 0% 100%)}
+.hot:hover,.hot.is-open{background:hsl(var(--primary-hover));transform:scale(1.15)}
 .hot.is-open::before{animation:none}
 
 .hot__card{position:absolute;left:0;right:0;bottom:0;z-index:3;
