@@ -534,7 +534,7 @@ button,input,select,textarea{font:inherit;color:inherit}
    ============================================================ */
 .places{display:grid;gap:1.25rem}
 @media (min-width:40rem){.places{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:68rem){.places{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:68rem){.places{grid-template-columns:repeat(3,1fr)}}
 
 .place{display:flex;flex-direction:column;padding:1.75rem 1.5rem;border-radius:var(--r);
   border:1px solid hsl(var(--border));background:hsl(var(--surface));
