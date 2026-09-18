@@ -1,28 +1,27 @@
 # Your Coffee — Website
 
-Marketing-Website für Self-Service-Kaffeestationen in Universitäten, Büros und
-öffentlichen Gebäuden in Berlin und Potsdam. Statisches HTML/CSS/JavaScript ohne
-Framework und ohne Build-Schritt.
+Marketing website for self-service coffee stations in universities, offices, and public
+buildings in Berlin and Potsdam. Static HTML/CSS/JavaScript, no framework and no build step.
 
-## Funktionen
+## Features
 
-- Landingpage mit Vorstellung des Produkts, Vorteilen und Standortübersicht
-- Kontaktformular, das Anfragen über ein Google Apps Script in ein Google Sheet schreibt
-- Impressum und Datenschutzerklärung nach deutschem Recht
-- Eigenes CSS-Design-System (`assets/css/style.css`), keine externen UI-Bibliotheken
+- Landing page presenting the product, benefits, and a location overview
+- Contact form that submits inquiries to a Google Sheet via a Google Apps Script
+- Imprint and privacy policy compliant with German law
+- Custom CSS design system (`assets/css/style.css`), no external UI libraries
 
-## Technik
+## Tech
 
 ```
-index.html                Startseite
-impressum.html             Impressum
-datenschutz.html           Datenschutzerklärung
-assets/css/style.css       Design-System
-assets/js/main.js          Formular-Logik, Interaktionen
-google-apps-script/        Backend-Skript für die Formular-Anbindung
+index.html                Home page
+impressum.html              Imprint
+datenschutz.html            Privacy policy
+assets/css/style.css        Design system
+assets/js/main.js           Form logic, interactions
+google-apps-script/         Backend script for the form integration
 ```
 
-Lokal ansehen:
+Local preview:
 
 ```bash
 python3 -m http.server 8080
